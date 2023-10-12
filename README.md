@@ -85,7 +85,7 @@ To use this Weather App, follow these steps:
 
 The Weather App defines two main routes:
 
-- `GET /`: This route displays the current weather information for a default location (Phillipines). It also provides a 5-day weather forecast for the same location.
+- `GET /`: This route displays the current weather information for a default location (Manila). It also provides a 5-day weather forecast for the same location.
 
 - `POST /`: This route allows users to search for weather information by entering a city name in the input field. It fetches and displays weather data for the specified city.
 
