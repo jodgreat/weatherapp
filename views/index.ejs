@@ -1,0 +1,103 @@
+<%- include('partials/header'); -%>
+
+<form action="/" method="post">
+  <div class="search-cities">
+    <input type="text" name="search-cities" placeholder="Search Cities" />
+    <button type="submit" class="search-cities-button">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+</form>
+
+<div class="weather-container">
+    <div class="weather-list">
+      <div class="country-info">
+        <div class="country">
+          <h1><%=countryName%></h1>
+          <p class="cof"><%=weatherDescription%></p>
+          <p class="temp"><%=temperature%></p>
+          <h5>Temperature</h5>
+        </div>
+        <img
+          id="weathericon"
+          src="../images/<%=icon%>.svg"
+          alt="Weather Icon"
+        />
+        <div class="humidity">
+          <p id="Humidity"><%=humidity%></p>
+          <h5>humidity</h5>
+        </div>
+
+        <div class="sunrise">
+          <p id="sunrise"><%=sunriseTime %>
+          <h5>Sunrise</h5>
+        </div>
+        <div class="sunset">
+          <p  id="sunset"><%=sunsetTime %></p>
+          <h5>Sunset</h5>
+        </div>
+      </div>
+
+      <div class="todays-forcast-container">
+        <h3>Hourly Forcast</h3>
+        <div class="todays-forcast">
+          <% for (let i = 0; i < 6; i++) { %>
+          <div class="forcast-list">
+            <p><%= forecastResult[i].time %></p>
+            <img src="../images/<%= forecastResult[i].icon %>.svg" alt="" />
+            <p class="tmp"><%= forecastResult[i].temperature %></p>
+          </div>
+          <% }; %>
+        </div>
+      </div>
+
+      <div class="weather-info">
+        <div class="info-list">
+          <p id="feels-like"><%=feelsLike%></p>
+          <h5>Real Feel</h5>
+         <p id="pressure"><%=pressure %></p>
+         <h5>Pressure</h5>
+        </div>
+        <div class="info-list">
+         <p id="feels-like"><%= tempMin %></p>
+         <h5>Temperature Min</h5>
+         <p id="tempMax"><%= tempMax %></p>
+         <h5>Temperature Max</h5>
+        </div>
+        <div class="info-list">
+         <p id="lat"><%=lat%></p>
+         <h5>Latitude</h5>
+          <p id="groundlevel"><%=lon%></p>
+          <h5>Longitude</h5>
+        </div>
+      </div>
+    </div>
+    <div class="week-forcast">
+      <h3>Next 4 day's Forcast</h3>
+      <% for (let i = 1; i < 5; i++) { %>
+      <div class="week-list">
+        <p><%= fiveDayForecast[i].date %></p>
+        <img src="../images/<%=fiveDayForecast[i].icon %>.svg" alt="" />
+        <p><%=fiveDayForecast[i].weather %></p>
+        <p><%=fiveDayForecast[i].temperature %></p>
+      </div>
+      <% }; %>
+      <h3>Air Condition</h3>
+      <div class="wind">
+          <div class="speed">
+          <p><%=airCondition.speed %></p>
+          <h5>Speed</h5>
+          </div>
+         <div class="gust">
+          <p><%=airGust%></p>
+          <h5>Gust</h5>
+         </div>
+         <div class="degree">
+          <p><%=airCondition.deg%></p>
+          <h5>Degree</h5>
+         </div>
+        
+      </div>
+    </div>
+
+    </div>

@@ -1,0 +1,288 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+body{
+    background-color:#0B131E;
+}
+hr{
+    color: #0A063C;
+}
+
+h5{
+    font-weight: 100;
+}
+.weather-container{
+    display: flex;
+    padding: 50px 150px 50px 150px;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* Search Output */
+.search-cities{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 150px 0px 150px;
+   
+}
+
+.search-cities input{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:#202B3B;
+    border: #7286FF 1px solid;
+    color:white;
+}
+.search-cities button{
+    background-color: #7286FF;
+    border: 0;
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+}
+
+.search-cities i{
+   color: white;
+   font-size: 1.5rem;
+}
+
+
+.country-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height:100%px;  
+    border: #7286FF 1px solid;
+    background-color:#202B3B;
+    color: white;
+    padding: 20px;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+.country-info p{
+    font-size: 1.50rem;
+    font-weight: 400;
+}
+
+.country p{
+    font-size: 1rem;
+    padding-top: 5px;
+}
+label {
+    font-size: 12px;
+}
+
+
+.country h1{
+    font-size: 2rem;
+}
+.country .temp{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.country-info img{
+    width:100px;
+    
+}
+
+/* Todays Forcast */
+
+
+.todays-forcast-container h3{
+    color: white;
+    padding-bottom: 20px;
+}
+
+.todays-forcast{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}   
+
+.forcast-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+    border: #7286FF 1px solid;
+    background-color:#202B3B;
+    color: white;
+    border-radius: 10px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+.forcast-list p{
+    padding-bottom: 5px;
+}
+
+.forcast-list img{
+    width: 80px;
+    padding-bottom: 10px;
+}
+
+.forcast-list .tmp{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+/* Air Condition */
+.weather-info{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap:wrap;
+}
+
+.info-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7286FF;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    flex-grow: 1;
+    flex-basis: 200;
+   
+}
+.info-list i{
+  
+    font-size: 2rem;
+    padding-bottom: 10px;
+
+}
+
+.info-list p{
+  
+    font-size: 2.5rem;
+    padding-bottom: 5px;
+
+}
+
+.info-list label {
+    padding-bottom: 5px;
+}
+
+/* Week Forcast */
+.week-forcast{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    height: 636px;
+    border: #7286FF 1px solid;
+    background-color:#202B3B;
+    color: #ffffff;
+    flex-grow: 1;
+   
+    
+}
+
+.week-list{
+   display: grid;
+   grid-template-columns: 100px 100px 100px 50px;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.week-forcast h3{
+    padding-top: 20px;
+}
+.week-list:not(:last-child){
+    border-bottom: #7286FF 1px solid;
+}
+
+
+.week-list p{
+    width: 100%;
+}
+.week-list img{
+    width: 100px;
+}
+
+
+.wind{
+    margin-top: 30px;
+    display: flex;
+    color: #ffffff;
+    border-radius: 10px;
+    gap: 20px;
+    width: 425px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+
+.wind p{
+    font-size: 2.5rem;
+}
+@media only screen and (max-width: 600px) {
+
+    .search-cities{
+        padding: 20px;
+    }
+
+    .weather-container{
+      padding: 20px;
+    }
+    
+    .week-list{
+       grid-template-columns: 50px 50px 50px 50px;
+        gap: 30px;
+        
+    }
+    .week-forcast {
+        padding: 20px;
+        height: 400px;
+        
+    }
+    
+    .week-list p{
+    font-size: 0.90rem;
+    }
+    .week-list img{
+        width: 50px;
+    }
+    .wind{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 20px;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        
+    }
+    
+}
