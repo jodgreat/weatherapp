@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 const apiKey = process.env.SECRET_KEY;
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
